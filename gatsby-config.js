@@ -2,19 +2,30 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter MDX Basic',
-    description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@chrisbiscardi',
+    title: 'Mostly Focused',
+    description: 'Coding Tutorials',
+    author: '@mostlyfocusedmike',
   },
   plugins: [
+    `gatsby-plugin-sass`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`, // TODO FIGURE OUT WHAT THIS DOES FOR OPTIMIZATION
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: { default: path.resolve('./src/components/layout.js') },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
       },
     },
-    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,8 +40,13 @@ module.exports = {
         path: `${__dirname}/src/pages`
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/src/articles`
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

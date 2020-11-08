@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap');
+
+body {
+    --blueColor: #0376CE;
+    --backgroundColor: #1A1A1A;
+    --foregroundColor: #FFF;
+}
+
+body {
+  background: var(--backgroundColor);
+}
+
+#mostly {
+  color: var(--blueColor);
+}
+
+nav a {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.prism-code {
+  box-shadow: 5px 5px 10px rgba(0,0,0,.4);
+  width: 75%;
+  max-width: 40rem;
+  margin: 1rem auto;
+}
+
+#article-content {
+  width: 50%;
+  min-width: 45rem;
+  margin: 0 auto;
+  background: var(--foregroundColor);
+  padding: 0.25rem;
+  #article-title, #article-subtitle {
+    padding-right: 1.5rem;
+    color: #000;
+    text-align: right;
+  }
+  #article-title {
+    letter-spacing: -0.1rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  #article-subtitle {
+    font-weight: 100;
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 0;
+    position: relative;
+    top: -1.8rem;
+  }
+  #featured-img {
+    position: relative;
+    top: -1rem;
+    display: block;
+  }
+  #blue-line-angle {
+    transform: skewX(-45deg);
+    border-bottom: 0.1rem solid var(--blueColor);
+    border-right: 0.1rem solid var(--blueColor);
+    height: 0.6rem;
+    width: 97%;
+    margin: 0 auto;
+    position: relative;
+    top: -2rem;
+  }
+  #article-body {
+    padding: 1rem;
+    h1, h2 {
+      margin-top: 1rem;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+}
