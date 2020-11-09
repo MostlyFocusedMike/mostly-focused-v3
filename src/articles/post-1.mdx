@@ -9,9 +9,14 @@ featuredImage: '../images/post1/cover.png'
 ---
 Docker can be confusing when you’re getting started. Even after you watch a few tutorials, its terminology can still be unclear. This article is intended for people who have installed Docker and played around a bit, but could use some clarification. We’re going to make all three core pieces of Docker and give some helpful other commands. It’s going to cover a lot, be sure to click the links.
 
-```docker
-FROM node:12-slim
-```
+# The overview
+We’re going to step through every piece of this graphic, but it’s helpful to see the three main stages upfront as a roadmap. In short, Dockerfiles are used to build images. Images are used to create containers. You then have to start and attach to the containers. The run command allows you to combine the create, start, and attach commands all at once.
+
+> Scroll to the end for a cheatsheet of every command we’ll use.
+
+## Our example server
+In order for our project to do something, we’re going to make a server.js file that sends a simple text response. **This is the only Node code in the tutorial. *You do not need to know Node.***
+
 <Link to="/">Go back to the homepage</Link>
 
 

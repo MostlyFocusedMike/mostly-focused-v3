@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
 body {
     --blueColor: #0376CE;
     --backgroundColor: #1A1A1A;
@@ -41,6 +40,17 @@ nav a {
     letter-spacing: -0.1rem;
     font-size: 3.5rem;
     font-weight: 700;
+
+  }
+  #blue-line-angle {
+    transform: skewX(-45deg);
+    border-bottom: 0.1rem solid var(--blueColor);
+    border-right: 0.1rem solid var(--blueColor);
+    height: 0.6rem;
+    width: 97%;
+    margin: 0 auto;
+    position: relative;
+    top: -1.8rem;
   }
   #article-subtitle {
     font-weight: 100;
@@ -55,21 +65,45 @@ nav a {
     top: -1rem;
     display: block;
   }
-  #blue-line-angle {
-    transform: skewX(-45deg);
-    border-bottom: 0.1rem solid var(--blueColor);
-    border-right: 0.1rem solid var(--blueColor);
-    height: 0.6rem;
-    width: 97%;
-    margin: 0 auto;
-    position: relative;
-    top: -2rem;
-  }
+
   #article-body {
     padding: 1rem;
     h1, h2 {
       margin-top: 1rem;
       font-family: 'Roboto', sans-serif;
+    }
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      border-bottom: 2px solid var(--blueColor);
+      display: inline-block;
+    }
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      color: #000;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0px 0px 0px #000;
+    }
+    blockquote {
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+      color: #555;
+      font-style: italic;
+    }
+    blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 2rem;
+      line-height: 0.1rem;
+      margin-right: 0.25rem;
+      vertical-align: -0.3rem;
+    }
+    blockquote p {
+      display: inline;
     }
   }
 }
