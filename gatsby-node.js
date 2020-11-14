@@ -30,8 +30,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   posts.forEach(({ node }, index) => {
     console.log('node.frontmatter.slug: ', node.frontmatter.slug);
     createPage({
-      // This is the slug you created before
-      // (or `node.frontmatter.slug`)
       path: node.frontmatter.slug,
       // This component will wrap our MDX content
       component: path.resolve(`./src/components/article-layout.js`),

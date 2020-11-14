@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
 body {
-    --blueColor: #0376CE;
+    --blueMain: #0376CE;
+    --blueSecond: #5FB9FC;
     --backgroundColor: #1A1A1A;
     --foregroundColor: #FFF;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 !important;
 }
 
 body {
@@ -10,7 +17,7 @@ body {
 }
 
 #mostly {
-  color: var(--blueColor);
+  color: var(--blueMain);
 }
 
 nav a {
@@ -23,6 +30,52 @@ nav a {
   width: 75%;
   max-width: 40rem;
   margin: 1rem auto;
+}
+
+#recommendations {
+  background: #000;
+  margin: 0;
+  padding: 0.5rem 0 1rem;
+  position: absolute;
+  left:0;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* unvisited link */
+  a {
+    text-decoration: none;
+  }
+  a:link, a:visited {
+    color: white;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: var(--blueSecond);
+  }
+
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+}
+
+#featured-articles-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.article-card {
+  width: 20rem;
+  margin: 0.2rem;
+  // .article-card-img {
+  // }
+  h2 {
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 
 #article-content {
@@ -44,8 +97,8 @@ nav a {
   }
   #blue-line-angle {
     transform: skewX(-45deg);
-    border-bottom: 0.1rem solid var(--blueColor);
-    border-right: 0.1rem solid var(--blueColor);
+    border-bottom: 0.1rem solid var(--blueMain);
+    border-right: 0.1rem solid var(--blueMain);
     height: 0.6rem;
     width: 97%;
     margin: 0 auto;
@@ -74,7 +127,7 @@ nav a {
     }
     h1 {
       font-family: 'Oswald', sans-serif;
-      border-bottom: 2px solid var(--blueColor);
+      border-bottom: 2px solid var(--blueMain);
       display: inline-block;
     }
     h2 {

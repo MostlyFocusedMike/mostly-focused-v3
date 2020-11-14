@@ -1,10 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link } from "gatsby"
-import './article-layout.css'
 import Img from "gatsby-image"
+import Recommendations from './Recommendations';
+import './article-layout.css'
 
 const shortcodes = { Link } // Provide common components here that can be used in blogs without needing imports
 
@@ -23,7 +23,9 @@ export default function PageTemplate({ data: { mdx } }) {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </div>
-
+      <Recommendations
+        helpIds={[1,2,3]}
+      />
     </div>
   )
 }

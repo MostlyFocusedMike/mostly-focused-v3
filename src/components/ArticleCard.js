@@ -1,21 +1,18 @@
-import React from "react"
+import React from 'react'
 import { Link } from 'gatsby'
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
 
 
-const ArticleCard = ({id, slug, title, fluid, excerpt, children}) => {
-  console.log('id: ', id);
-  console.log('slug: ', slug);
-  console.log('title: ', title);
-  console.log('fluid: ', fluid);
-  console.log('excerpt: ', excerpt);
+const ArticleCard = ({ id, slug, title, fluid }) => {
   return (
-    <li key={id}>
+    <li className='article-card' key={id}>
       <Link to={slug}>
+        <Img
+         className='article-card-img'
+         fluid={fluid}
+        />
         <h2>{title}</h2>
-        <Img fluid={fluid} />
       </Link>
-      <p>{excerpt}</p>
     </li>
   )
 }

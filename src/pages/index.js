@@ -15,13 +15,12 @@ const BlogIndex = ({ data }) => {
         <Link to='/social'>Social</Link>
       </nav>
       <h2>Featured Articles</h2>
-      <ul>
+      <ul id='featured-articles-main'>
         {posts.map(({ node: post }) => (
           <ArticleCard
            key={post.id}
            id={post.id}
            slug={post.frontmatter.slug}
-           excerpt={post.excerpt}
            title={post.frontmatter.title}
            fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
           />
