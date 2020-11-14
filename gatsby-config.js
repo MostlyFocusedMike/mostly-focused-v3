@@ -1,4 +1,5 @@
 const path = require('path')
+const remarkSlug = require(`remark-slug`);
 
 module.exports = {
   siteMetadata: {
@@ -24,6 +25,9 @@ module.exports = {
             },
           },
         ],
+        remarkPlugins: [
+          remarkSlug
+        ]
       },
     },
     {

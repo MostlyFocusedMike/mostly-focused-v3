@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 const shortcodes = { Link } // Provide common components here that can be used in blogs without needing imports
 
 export default function PageTemplate({ data: { mdx } }) {
+  console.log('mdx.tableOfContents: ', mdx.tableOfContents);
   return (
     <div id="article-content">
       <h1 id='article-title'>{mdx.frontmatter.title}</h1>
@@ -32,6 +33,7 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
+      tableOfContents
       frontmatter {
         title
         subtitle

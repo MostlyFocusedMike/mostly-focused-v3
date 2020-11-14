@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import ArticleCard from "../components/ArticleCard";
 
 const BlogIndex = ({ data }) => {
   const { allMdx: { edges: posts }, site: {siteMetadata} } = data;
@@ -17,13 +17,14 @@ const BlogIndex = ({ data }) => {
       <h2>Featured Articles</h2>
       <ul>
         {posts.map(({ node: post }) => (
-          <li key={post.id}>
-            <Link to={post.frontmatter.slug}>
-              <h2>{post.frontmatter.title}</h2>
-              <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
-            </Link>
-            <p>{post.excerpt}</p>
-          </li>
+          <ArticleCard
+           key={post.id}
+           id={post.id}
+           slug={post.frontmatter.slug}
+           excerpt={post.excerpt}
+           title={post.frontmatter.title}
+           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+          />
         ))}
       </ul>
     </div>
