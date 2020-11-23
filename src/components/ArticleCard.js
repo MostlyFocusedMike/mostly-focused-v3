@@ -11,7 +11,7 @@ const ArticleCard = ({ id, slug, title, fluid }) => {
          className='article-card-img'
          fluid={fluid}
         />
-        <h2>{title}</h2>
+        {title}
       </Link>
     </li>
   )
