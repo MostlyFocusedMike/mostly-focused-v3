@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import ArticleCards from "../components/ArticleCards";
 
 const BlogIndex = ({ data }) => {
@@ -27,10 +27,10 @@ const BlogIndex = ({ data }) => {
       <div id="about-section">
         <h2>About</h2>
         <p>This would be a little blurb about me and all the links to my stuff</p>
-        <a href="https://mostlyfocusedmike.medium.com" target="_blank" >My Medium Page</a>
-        <a href="https://www.linkedin.com/in/michael-cronin-2781174b/" target="_blank" >My LinkedIn Page</a>
-        <a href="https://github.com/mostlyFocusedMike" target="_blank" >My GitHub </a>
-        <a href="https://twitter.com/MostlyFocused" target="_blank" >My Twitter </a>
+        <a href="https://mostlyfocusedmike.medium.com" target="_blank" rel="noopener noreferrer">My Medium Page</a>
+        <a href="https://www.linkedin.com/in/michael-cronin-2781174b/" target="_blank" rel="noopener noreferrer">My LinkedIn Page</a>
+        <a href="https://github.com/mostlyFocusedMike" target="_blank" rel="noopener noreferrer">My GitHub </a>
+        <a href="https://twitter.com/MostlyFocused" target="_blank" rel="noopener noreferrer">My Twitter </a>
       </div>
 
     </div>
@@ -44,13 +44,18 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx {
+    allMdx(sort: { fields: [frontmatter___helpId], order: DESC }) {
       edges {
         node {
           id
           excerpt
           frontmatter {
+            helpId
             title
+            subtitle
+            description
+            tags
+            date
             slug
             featuredImage {
               childImageSharp {
