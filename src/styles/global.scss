@@ -66,10 +66,10 @@ nav a {
   justify-content: center;
 }
 
-.article-card {
+.article-card, .article-card-big {
   width: 20rem;
   margin: 0.2rem;
-  .article-card-img {
+  .article-card-img, .article-card-big-img {
     width: 95%;
     margin: 0 auto 0.25rem;
   }

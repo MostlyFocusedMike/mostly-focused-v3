@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import ArticleCards from "../components/ArticleCards";
+import ArticleCardsBig from "../components/ArticleCardsBig";
 
 const BlogIndex = ({ data }) => {
   const { allMdx: { edges: posts }, site: { siteMetadata } } = data;
@@ -22,6 +23,7 @@ const BlogIndex = ({ data }) => {
         <h2>Search Articles</h2>
         <p>This would be the articles in chron order and only showing the selected tag</p>
         <p>TODO: make the full screen card with subtitle and tags</p>
+        <ArticleCardsBig posts={posts} />
       </div>
 
       <div id="about-section">
