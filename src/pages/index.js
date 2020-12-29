@@ -1,30 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import ArticleCard from "../components/ArticleCard";
+import ArticleCards from "../components/ArticleCards";
 
 const BlogIndex = ({ data }) => {
-  const { allMdx: { edges: posts }, site: {siteMetadata} } = data;
+  const { allMdx: { edges: posts }, site: { siteMetadata } } = data;
   console.log('siteMetadata: ', siteMetadata);
   return (
     <div>
       <h1><span id="mostly">mostly</span><span id="focused">Focused</span></h1>
-      <nav>
-        <Link to='/articles'>Articles</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/friends'>Friends</Link>
-        <Link to='/social'>Social</Link>
-      </nav>
       <h2>Featured Articles</h2>
       <ul id='featured-articles-main'>
-        {posts.map(({ node: post }) => (
-          <ArticleCard
-           key={post.id}
-           id={post.id}
-           slug={post.frontmatter.slug}
-           title={post.frontmatter.title}
-           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-          />
-        ))}
+        <ArticleCards posts={posts} />
       </ul>
     </div>
   )
