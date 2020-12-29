@@ -7,11 +7,32 @@ const BlogIndex = ({ data }) => {
   console.log('siteMetadata: ', siteMetadata);
   return (
     <div>
-      <h1><span id="mostly">mostly</span><span id="focused">Focused</span></h1>
-      <h2>Featured Articles</h2>
-      <ul id='featured-articles-main'>
-        <ArticleCards posts={posts} />
-      </ul>
+      <div id='main-logo'>
+        <h1><span id="mostly">mostly</span><span id="focused">FOCUSED</span></h1>
+      </div>
+
+      <div id="featured-articles-section">
+        <h2>Featured Articles</h2>
+        <ul id='featured-articles'>
+          <ArticleCards posts={posts} />
+        </ul>
+      </div>
+
+      <div id="all-articles-section">
+        <h2>Search Articles</h2>
+        <p>This would be the articles in chron order and only showing the selected tag</p>
+        <p>TODO: make the full screen card with subtitle and tags</p>
+      </div>
+
+      <div id="about-section">
+        <h2>About</h2>
+        <p>This would be a little blurb about me and all the links to my stuff</p>
+        <a href="https://mostlyfocusedmike.medium.com" target="_blank" >My Medium Page</a>
+        <a href="https://www.linkedin.com/in/michael-cronin-2781174b/" target="_blank" >My LinkedIn Page</a>
+        <a href="https://github.com/mostlyFocusedMike" target="_blank" >My GitHub </a>
+        <a href="https://twitter.com/MostlyFocused" target="_blank" >My Twitter </a>
+      </div>
+
     </div>
   )
 }

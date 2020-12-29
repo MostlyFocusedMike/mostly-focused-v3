@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
 body {
     --blueMain: #0376CE;
     --blueSecond: #5FB9FC;
@@ -16,10 +16,6 @@ body {
   background: var(--backgroundColor);
 }
 
-#mostly {
-  color: var(--blueMain);
-}
-
 nav a {
   display: inline-block;
   padding: 1rem;
@@ -32,7 +28,39 @@ nav a {
   margin: 1rem auto;
 }
 
-#featured-articles-main {
+#main-logo {
+  background: white;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  h1 {
+    display: block;
+    margin: 0;
+    #mostly {
+      margin: 0;
+      font-size: 3rem;
+      font-style: italic;
+      font-family: Roboto,sans-serif;
+      color: var(--blueMain);
+      letter-spacing: -0.15rem;
+    }
+    #focused {
+      color: var(--backgroundColor);
+      font-size: 4rem;
+      padding-left: .1rem;
+      padding-right: 1rem;
+      font-style: normal;
+      font-family: Oswald, sans-serif;
+      font-weight: 100;
+      letter-spacing: -0.2rem;
+    }
+  }
+}
+
+#featured-articles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
