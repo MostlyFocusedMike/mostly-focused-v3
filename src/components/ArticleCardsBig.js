@@ -4,7 +4,9 @@ import Img from 'gatsby-image'
 
 const ArticleCardsBig = ({ posts }) => {
   return (
-    posts.map(({ node: post }) => {
+    <ul id='article-cards-big'>
+    {
+      posts.map(({ node: post }) => {
         const {
           id,
           frontmatter: {
@@ -17,7 +19,6 @@ const ArticleCardsBig = ({ posts }) => {
           },
         } = post;
         return (
-          <ul id='article-cards-big'>
             <li className='article-card-big' key={id}>
               <div className='top-half'>
 
@@ -50,11 +51,12 @@ const ArticleCardsBig = ({ posts }) => {
 
               </div>
 
-              <p classname="article-card-big-description">{description}</p>
+              <p className="article-card-big-description">{description}</p>
             </li>
-          </ul>
         )
-    })
+      })
+    }
+    </ul>
   )
 }
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:ital,wght@0,100;0,300,0,400;0,700;1,100&display=swap');
 body {
     --blueMain: #0376CE;
     --blueSecond: #5FB9FC;
@@ -76,6 +76,67 @@ nav a {
   h2 {
     text-align: center;
     font-size: 1rem;
+  }
+}
+
+#article-cards-big {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  .article-card-big {
+    border: 2px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 50rem;
+    .top-half {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      height: 80%;
+      .top-left {
+        margin: 0;
+        width: 30%;
+        min-width: 22rem;
+      }
+      .top-right {
+        width: 55%;
+        margin: 0;
+        min-width: 22rem;
+        h1 {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          margin: 0;
+          font-size: 2.2rem;
+          text-align: right;
+        }
+        h2 {
+          font-family: 'Helvetica', sans-serif;
+          font-weight: 100;
+          font-style: italic;
+          font-size: 1.5rem;
+          text-align: right;
+          margin: 0.5rem;
+        }
+        a {
+          text-decoration: none;
+          text-align: center;
+        }
+        a:link, a:visited {
+          color: white;
+        }
+        /* mouse over link */
+        a:hover {
+          color: var(--blueSecond);
+        }
+        /* selected link */
+        a:active {
+          color: blue;
+        }
+      }
+    }
   }
 }
 
