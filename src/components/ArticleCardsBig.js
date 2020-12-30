@@ -39,19 +39,25 @@ const ArticleCardsBig = ({ posts }) => {
                     </div>
                   </Link>
                   <div className="article-card-big-tags-holder">
-                    <h3>Tags:</h3>
+                    <h3 className='article-card-big-tag-label'>Tags:</h3>
                     <ul className="article-card-big-tags">
                       {
-                        tags && tags.map((tag, idx )=> <li key={idx}>{tag}</li>)
+                        tags && tags.map((tag, idx) => (
+                          <li
+                            key={idx}
+                            className='article-card-big-tag'
+                          >{tag}
+                          </li>
+                        ))
                       }
                     </ul>
                   </div>
-                  <hr />
                 </div>
 
               </div>
-
-              <p className="article-card-big-description">{description}</p>
+              <div className="lower-half">
+                <p className="article-card-big-description">{description}</p>
+              </div>
             </li>
         )
       })

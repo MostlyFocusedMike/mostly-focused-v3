@@ -43,7 +43,8 @@ nav a {
       margin: 0;
       font-size: 3rem;
       font-style: italic;
-      font-family: Roboto,sans-serif;
+      font-weight: 100;
+      font-family: 'Roboto', sans-serif;
       color: var(--blueMain);
       letter-spacing: -0.15rem;
     }
@@ -85,17 +86,18 @@ nav a {
   flex-wrap: wrap;
   width: 100%;
   .article-card-big {
-    border: 2px solid white;
+    margin: 1rem;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     max-width: 50rem;
     .top-half {
       padding: 0;
+      margin-bottom: 1rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      height: 80%;
+      width: 100%;
       .top-left {
         margin: 0;
         width: 30%;
@@ -105,21 +107,24 @@ nav a {
         width: 55%;
         margin: 0;
         min-width: 22rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #707070;
         h1 {
           font-family: 'Roboto', sans-serif;
           font-weight: 300;
           margin: 0;
           font-size: 2.2rem;
-          text-align: right;
+          text-align: left;
         }
         h2 {
           font-family: 'Helvetica', sans-serif;
           font-weight: 100;
           font-style: italic;
           font-size: 1.5rem;
-          text-align: right;
-          margin: 0.5rem;
+          text-align: left;
+          margin: 0.5rem 1rem;
         }
+
         a {
           text-decoration: none;
           text-align: center;
@@ -135,6 +140,46 @@ nav a {
         a:active {
           color: blue;
         }
+
+        .article-card-big-tags-holder {
+          display: flex;
+          flex-wrap: wrap;
+          .article-card-big-tag-label {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 100;
+            color: var(--foregroundColor);
+            margin: 0;
+            font-size: 1.5rem;
+          }
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              margin: 0 0.75rem;
+              font-family: 'Oswald', sans-serif;
+              font-weight: 100;
+              font-size: 1.5rem;
+              letter-spacing: -0.05rem;
+              color: var(--blueSecond);
+            }
+          }
+        }
+      }
+    }
+    .lower-half {
+      width: 100%;
+      border-bottom: 2px solid var(--blueSecond);
+      margin: 1rem auto;
+      padding-bottom: 1rem;
+      .article-card-big-description {
+        width: 90%;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        font-size: 1.25rem;
+        color: var(--foregroundColor);
       }
     }
   }
